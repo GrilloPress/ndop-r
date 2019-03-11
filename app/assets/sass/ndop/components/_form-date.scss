@@ -1,0 +1,20 @@
+.-date {
+
+  div {
+    display: inline-block;
+    padding-right: 1em;
+    margin-top: 5px;
+  }
+
+  .day,
+  .month {
+    width: 3em;
+    -moz-appearance: textfield;
+  }
+
+  .year {
+    width: 4em;
+    -moz-appearance: textfield;
+  }
+
+}

@@ -1,0 +1,59 @@
+.form-label {
+  @include bold-font(20);
+  display: block;
+  position: relative;
+  width: auto;
+  cursor: pointer;
+
+  @include media(mid) {
+    float: left;
+    clear: both;
+  }
+
+}
+
+.form-group__item {
+
+  margin: 0;
+  position: relative;
+  min-height: 40px; // match the radio inputs
+}
+
+.form-group__divider {
+
+  @include core-font(20);
+  min-height: 40px; // match the radio inputs
+  margin-top: 16px;
+  padding-left: 8px;
+}
+////////////////////////////////////////
+// Potential to be deleted
+
+.form-label--radio {
+  min-height: 40px;
+  font-weight: normal;
+  margin-top: 12px;
+}
+
+///////////////////////////////////////
+
+.form-label--inline {
+
+  margin-right: 1.5rem;
+
+}
+.form-label--large {
+  @include bold-font(36);
+}
+
+.form-label__hint {
+  color: $grey-1;
+  display: block;
+  font-weight: normal;
+  line-height: 150%;
+  margin-top: $baseline-grid-unit * 4;
+}
+
+.gender-select label {
+  font-weight: normal;
+}

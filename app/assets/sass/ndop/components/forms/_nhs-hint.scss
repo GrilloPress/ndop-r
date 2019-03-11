@@ -1,0 +1,7 @@
+.nhs-hint {
+  @include core-font(20);
+  color: $grey-1;
+  display: block;
+  line-height: $base-font-size * 1.5;
+  margin-top: 16px;
+}
