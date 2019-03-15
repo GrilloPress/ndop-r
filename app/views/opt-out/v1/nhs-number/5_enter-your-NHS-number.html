@@ -1,0 +1,45 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Enter your NHS Number" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+      <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+         <h2 class="h3" id="error-summary">To use this online service, resolve the following errors</h2>
+         <ul class="link-list" id="link-to-errors">
+         </ul>
+      </div>
+      <form class="" action="/{{ PROTOTYPEURL }}/nhs-number/6_check-your-details" method="post">
+         <div>
+            <h1 class="h2">
+               <label for="nhs-number">{{ contentTitle }}</label>
+            </h1>
+            <div class="grid-row">
+               <div class="column--three-quarters">
+                  <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
+                  <p class="error error-message error-text error-label" id="nhs-number-error">Please enter your NHS Number</p>
+                  <input autocomplete="off" type="text" id="nhs-number" name="nhs-number" value="" class="-small form-control">
+               </div>
+            </div>
+         </div>
+         <input type="submit" class="button" id="submit-details" value="Continue">
+      </form>
+      <p>
+         <a href="javascript: history.go(-1)">Go back to the previous page </a>
+      </p>
+   </div>
+</div>
+{% endblock %}

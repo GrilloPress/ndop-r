@@ -1,0 +1,47 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Review your choice" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% set method = data['channelChoice'] %}
+{% set authMethod %}
+  {% if data['channelChoice'] %}
+    {{ "email to al•••••••••••@gmail.com" if method == 'email' }}
+    {{ "text to ••••••••788" if method == 'text' }}
+  {% else %}
+    text to ••••••••788
+  {% endif %}
+{% endset %}
+
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+     <div class="reading-width">
+       <h1 class="h2">{{ contentTitle }}</h1>
+       <p>
+         Your confidential patient information
+         <strong>{{ "cannot" if data['single-pref'] === "do not allow" else "can" }}</strong> be shared | <a href="/v2/app/05-make-your-choice" onclick="history.go(-1); return false;">Change <span class="util-visuallyhidden">your choice</span></a></p>
+
+       <p>
+         We will send confirmation of your choice by {{ authMethod }}
+       </p>
+
+       <form class="form" action="/{{ PROTOTYPEURL }}/question/11_your-choice-has-been-saved" method="post">
+         <input type="submit" class="button" value="Confirm">
+       </form>
+     </div>
+   </div>
+</div>
+{% endblock %}

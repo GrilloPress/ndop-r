@@ -1,0 +1,55 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Enter your name" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+      <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+         <h2 class="h3" id="error-summary">There is a problem</h2>
+         <ul class="link-list" id="link-to-errors">
+         </ul>
+      </div>
+      <form class="" action="/{{ PROTOTYPEURL }}/nhs-number/6_check-your-details" method="post">
+         <fieldset>
+            <legend>
+               <h1 class="h2">{{ contentTitle }}</h1>
+            </legend>
+            <div class="grid-row">
+               <div class="column--two-thirds">
+                  <div class="form-group form-row" id="first-name">
+                     <p class="error error-message error-text error-label" id="first-name-error">
+                        Enter your first name
+                     </p>
+                     <label for="first-name-input" class="form-label">First name</label>
+                     <input autocomplete="off" type="text" class="form-control" id="first-name-input" name="first-name" value={{ data['first-name'] if data['first-name'] else "Sally" }}>
+                  </div>
+                  <div class="form-group form-row" id="last-name">
+                     <p class="error error-message error-text error-label" id="last-name-error">Enter your last name
+                     </p>
+                     <label for="last-name-input" class="form-label">Last name</label>
+                     <input autocomplete="off" type="text" class="form-control" id="last-name-input" name="last-name" value={{ data['last-name'] if data['last-name'] else "Wash" }}>
+                  </div>
+               </div>
+            </div>
+         </fieldset>
+         <input type="submit" class="button" id="submit-details" value="Continue">
+      </form>
+      <p>
+         <a href="javascript: history.go(-1)">Go back to the previous page</a>
+      </p>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Sorry, we seem to have the wrong contact details for you" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <p>This may be because you have not updated your details with your GP Practice, or your GP Practice has not yet shared them with us.</p>
+      <p>You can try again when your information is updated, or you can choose use the non-digital service instead.</p>
+      <p>Please see <a href="/v1/00-other-ways-to-manage-your-choice">other ways to make your choice</a>.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

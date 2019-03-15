@@ -1,0 +1,51 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Enter your postcode" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+      <div class="error error-summary callout callout--error error-message" role="alert" tabindex="-1">
+         <h2 class="h3" id="error-summary">To use this online service, resolve the following errors</h2>
+         <ul class="link-list" id="link-to-errors">
+         </ul>
+      </div>
+      <form class="" action="/{{ PROTOTYPEURL }}/postcode/6_check-your-details" method="post">
+         <div>
+            <h1 class="h2">
+               <label for="nhs-number">{{ contentTitle }}</label>
+            </h1>
+            <div class="grid-row">
+                      <div class="column--three-quarters">
+                        <div id="postcode-input">
+                          <div class="form-row">
+                            <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
+                            <span class="form-label__hint">This must be your postcode you have registered with your GP surgery.</span>
+                            <span class="form-label__hint">For example, 'LS1 6AE'</span>
+                            <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="" class="-small form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+         </div>
+         <input type="submit" class="button" id="submit-details" value="Continue">
+      </form>
+      <p>
+         <a href="javascript: history.go(-1)">Go back to the previous page </a>
+      </p>
+   </div>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Contact us if you have not received your security code" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <p>
+        We may be able to guide you through the service, or make your choice on your behalf.
+      </p>
+      <p>
+        Call: 0300 303 5678
+      </p>
+      <p>
+        Open: 9am to 5pm Monday to Friday (excluding bank holidays).
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}
