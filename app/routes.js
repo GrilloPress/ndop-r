@@ -40,8 +40,6 @@ router.post('/opt-out/v1/details/4_do-you-know-your-NHS-number', function (req, 
 router.post('/opt-out/v1/OTP/7_get-your-security-code', function (req, res) {
   let answer = req.body.channelChoice;
 
-  console.log(answer);
-
   if (answer === 'email') { // the || means this OR that
 
     res.redirect('/opt-out/v1/OTP/8_enter-your-security-code')
