@@ -2,30 +2,12 @@
 const express = require('express');
 const router = express.Router();
 
-// Add your routes here - above the module.exports line
-
-// Passing data example
-router.get('/examples/passing-data', function (req, res) {
-  res.render('examples/passing-data/index')
-});
-
-// Branching example
-router.post('/examples/branching/answer', function (req, res) {
-  let nhsNumber = req.body.nhsNumber;
-
-  if (nhsNumber === 'Yes') {
-    res.redirect('/examples/branching/answer-yes')
-  } else {
-    res.redirect('/examples/branching/answer-no')
-  }
-});
-
 router.post('/opt-out/v1/details/4_do-you-know-your-NHS-number', function (req, res) {
   let answer = req.body.auth;
 
   if (answer === 'yes') {
 
-    res.redirect('/opt-out/v1/nhs-number/5_enter-your-NHS-number')
+    res.redirect('/opt-out/v1/NHS-number/5_enter-your-NHS-number')
 
   } else if (answer === 'no') {
 
