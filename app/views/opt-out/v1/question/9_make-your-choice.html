@@ -50,12 +50,17 @@
                <div id="single-question-input-error" class="error error-message">
                   <p class="error-text">Indicate your choice to continue</p>
                </div>
-               <input type="radio" name="single-pref" id="single-opted-in" value="allow" class="multiple-choice--radio">
-               <label for="single-opted-in" class="form-label form-label--radio multiple-choice--radio lg"> Yes
-               </label>
-               <input type="radio" name="single-pref" id="single-opted-out" value="do not allow" class="">
-               <label for="single-opted-out" class="form-label form-label--radio multiple-choice--radio lg"> No
-               </label>
+               <div class="form-group__item">
+                 <input type="radio" name="single-pref" id="single-opted-in" value="allow" class="multiple-choice--radio">
+                 <label for="single-opted-in" class="form-label form-label--radio multiple-choice--radio lg"> Yes
+                 </label>
+               </div>
+
+               <div class="form-group__item">
+                 <input type="radio" name="single-pref" id="single-opted-out" value="do not allow" class="">
+                 <label for="single-opted-out" class="form-label form-label--radio multiple-choice--radio lg"> No
+                 </label>
+               </div>
             </fieldset>
             <input id="submit-pref" class="button" type="submit" name="submit-pref" value="Continue">
          </form>

@@ -34,14 +34,18 @@
                <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
                <span class="form-label__hint">You can find this on any letter sent to you by the NHS, on a prescription or by logging in to a GP practice online service</span>
             </div>
-            <input type="radio" name="auth" id="nhs-number-journey" value="yes" class="multiple-choice--radio">
-            <label for="nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
-            Yes
-            </label>
-            <input type="radio" name="auth" id="no-nhs-number-journey" value="no" class="">
-            <label for="no-nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
-            No
-            </label>
+            <div class="form-group__item">
+              <input type="radio" name="auth" id="nhs-number-journey" value="yes" class="multiple-choice--radio">
+              <label for="nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
+              Yes
+              </label>
+            </div>
+            <div class="form-group__item">
+              <input type="radio" name="auth" id="no-nhs-number-journey" value="no" class="">
+              <label for="no-nhs-number-journey" class="form-label form-label--radio multiple-choice--radio lg">
+              No
+              </label>
+            </div>
          </fieldset>
          <input type="submit" class="button" id="submit-details" value="Continue">
       </form>
