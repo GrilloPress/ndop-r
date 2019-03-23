@@ -7,7 +7,7 @@ router.post('/opt-out/v1/details/4_do-you-know-your-NHS-number', function (req, 
 
   if (answer === 'yes') {
 
-    res.redirect('/opt-out/v1/NHS-number/5_enter-your-NHS-number')
+    res.redirect('/opt-out/v1/nhs-number/5_enter-your-NHS-number')
 
   } else if (answer === 'no') {
 
