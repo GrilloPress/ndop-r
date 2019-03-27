@@ -21,4 +21,9 @@
 .has-error .input-okay {
 
   border-color: $nhs-blue;
+
+  &:focus {
+
+    border-color: $nhs-blue;
+  }
 }
