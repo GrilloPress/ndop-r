@@ -14,7 +14,7 @@ router.post('/opt-out/v1/details/4_do-you-know-your-NHS-number', function (req, 
     res.redirect('/opt-out/v1/postcode/5_enter-your-postcode')
 
   } else {
-    res.redirect('/opt-out/v1/errors/details/4_no-choice-made')
+    res.redirect('/opt-out/v1/errors/do-you-know-your-nhs-number/no-option-selected')
   }
 });
 
