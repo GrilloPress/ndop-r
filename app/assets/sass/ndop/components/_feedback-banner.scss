@@ -20,7 +20,7 @@
   border-top: 2px solid rgba(33, 43, 50, 0.16);
   display: none; /* [1] */
   margin: 0 auto;
-  padding: 0;
+  padding: 0 0 12px 0;
   @include media(mobile) {
     padding: 12px 0;
   }

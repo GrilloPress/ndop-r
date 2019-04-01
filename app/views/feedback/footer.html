@@ -1,0 +1,53 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Page with feedback link in footer" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+     <div class="reading-width">
+       <h1 class="h2">{{ contentTitle }}</h1>
+
+
+     </div>
+   </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer role="contentinfo">
+    <div class="global-footer">
+      <div class="global-footer__inner">
+        <div>
+          <h2 class="util-visuallyhidden">Terms and conditions</h2>
+          <ul class="link-list">
+            <li>
+              <a href="#" target="_blank">Give feedback about this page or service <span class="util-visuallyhidden"> - Page opens in new window</span></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Privacy notice <span class="util-visuallyhidden"> - Page opens in new window</span></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Terms and conditions <span class="util-visuallyhidden"> - Page opens in new window</span></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Cookie policy <span class="util-visuallyhidden"> - Page opens in new window</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+{% endblock %}

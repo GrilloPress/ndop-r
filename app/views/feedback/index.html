@@ -1,0 +1,45 @@
+{% set PROTOTYPEURL = "feedback" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Feedback banner" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <p>Make it easiser to get feedback from users.</p>
+      <h2 class="h3">Pages</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/v1">Feedback banner (v1)</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/footer">Link in footer to be added</a>
+        </li>
+      </ul>
+      <h2 class="h3">Suggested end of service feedback points</h2>
+      <ul>
+        <li>
+          Verification failure
+        </li>
+        <li>
+          Your choice has been saved
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
