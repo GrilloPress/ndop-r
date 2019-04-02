@@ -20,7 +20,7 @@
     <div class="error error-summary callout callout--error error-message error-message-active" role="alert" tabindex="-1">
       <h2 class="h3" id="error-summary">There is a problem</h2>
       <ul class="link-list" id="link-to-errors">
-        <li id="nhs-number-error-link"><a href="#nhs-number">We think you've entered a National Insurance number.<br> You need to enter your NHS number</br></a></li>
+        <li id="nhs-number-error-link"><a href="#nhs-number">Check that you've entered your NHS number correctly</a></li>
       </ul>
     </div>
       <form class="" action="/{{ PROTOTYPEURL }}/nhs-number/6_check-your-details" method="post">
@@ -31,8 +31,8 @@
             <div class="grid-row">
                <div class="column--three-quarters">
                   <span class="form-label__hint">This is a 10 digit number, like 485 777 3456</span>
-                  <p class="error error-message error-text error-label error-message-active" id="nhs-number-error">We think you've entered a National Insurance number. You need to enter your NHS number</p>
-                  <input autocomplete="off" type="text" id="nhs-number" name="nhs-number" value="QQ 12 34 56 C" class="-small form-control">
+                  <p class="error error-message error-text error-label error-message-active" id="nhs-number-error">Check that you've entered your NHS number correctly</p>
+                  <input autocomplete="off" type="text" id="nhs-number" name="nhs-number" value="" class="-small form-control">
                </div>
             </div>
          </div>
