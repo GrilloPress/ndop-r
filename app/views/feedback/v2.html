@@ -4,8 +4,10 @@
 {% set beta = "True" %}
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
+<script src="/js/feedback.js" type="text/javascript"></script>
 {% endblock %}
 {% extends 'layouts/layout-ndop.html' %}
+{% set footerClasses = "ndop-banner--active" %}
 
 {% block pageTitle %}
   {{ title }}
@@ -58,7 +60,7 @@
 {% endblock %}
 
 {% block afterContent %}
-<div class="nhsuk-feedback-banner" id="nhsuk-feedback-banner" style="display: block;">
+<div class="nhsuk-feedback-banner" id="nhsuk-feedback-banner">
    <div class="page-section">
      <div class="grid-row">
        <div class="column--full">
@@ -71,4 +73,5 @@
      </div>
    </div>
  </div>
+
 {% endblock %}
