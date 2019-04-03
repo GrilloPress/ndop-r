@@ -1,0 +1,49 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "System errors" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/generic-error">Generic error</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-unavailable-planned">Service unavailable planned</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-unavailable-unplanned">Service unavailable unplanned</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/session-expired">Session expired</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/page-not-found">404 page not found</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/cannot-save-choice">Unable to save the user's choice</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/geo-restricted">User is forbidden from seeing the page</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

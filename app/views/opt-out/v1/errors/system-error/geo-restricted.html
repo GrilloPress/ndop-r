@@ -1,0 +1,39 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Sorry, you cannot see this page" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+      <p>This might be because:</p>
+      <ul>
+        <li>you're outside of the UK and this service is only available in the UK</li>
+        <li>you've tried to open a file you cannot open, such as an image</li>
+      </ul>
+
+      <p>If you think this is wrong, contact us to let us know:</p>
+
+      <p><a =href"mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a></p>
+
+      <p><strong>By phone</strong></p>
+      <p>0300 303 5678<p>
+      <p>Monday to Friday, 9am to 5pm excluding bank holidays</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
