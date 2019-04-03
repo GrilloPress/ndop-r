@@ -1,0 +1,65 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Get your security code" %}
+{% set beta = "True" %}
+{% set title = "Error - " + contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+      <div class="reading-width">
+         <div class="error error-summary callout callout--error error-message error-message-active" role="alert" tabindex="-1" id="error">
+            <h2 class="h3" id="error-summary">There is a problem</h2>
+            <ul class="link-list" id="link-to-errors">
+               <li>
+                  <a href="#verification-radio">Select where we should send your security code</a>
+               </li>
+            </ul>
+         </div>
+         <h1 class="h2">{{ contentTitle }}</h1>
+         <p>With the details you gave us we think we’ve found your contact details from your health records.</p>
+         <p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
+         <form id="verification-radio" class="" action="/{{ PROTOTYPEURL }}/OTP/7_get-your-security-code" method="post">
+            <fieldset class="form-group form-row form-row-error-active has-error">
+               <legend class="h3">
+                  Where should we send your security code?
+               </legend>
+               <div class="error error-message error-message-active">
+                  <p class="error-text error-label">Select where we should send your security code</p>
+               </div>
+               <div class="form-group__item">
+                  <input type="radio" name="channelChoice" id="email-verification" value="email" class="multiple-choice--radio">
+                  <label for="email-verification" class="form-label form-label--radio form-label-lg">
+                  By email to al•••••••••••@gmail.com
+                  </label>
+               </div>
+               <div class="form-group__item">
+                  <input type="radio" name="channelChoice" id="text-verification" value="text" class="multiple-choice--radio">
+                  <label for="text-verification" class="form-label form-label--radio form-label-lg">
+                  By text to ••••••••788
+                  </label>
+               </div>
+               <div class="form-group__item">
+                  <input type="radio" name="channelChoice" id="unrecognised" value="unrecognised" class="">
+                  <label for="unrecognised" class="form-label form-label--radio">
+                  I'm not able to get a security code
+                  </label>
+               </div>
+            </fieldset>
+            <input id="choose-option" class="button" type="submit" value="Submit">
+         </form>
+      </div>
+   </div>
+</div>
+{% endblock %}
