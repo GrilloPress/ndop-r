@@ -19,30 +19,92 @@
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
+      <h2 class="h3">Generic error</h2>
       <ul>
         <li>
           <a href="/{{ PROTOTYPEURL}}/errors/system-error/generic-error">Generic error</a>
         </li>
+      </ul>
+      <h2 class="h3">Service down</h2>
+      <ul>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-unavailable-planned">Service unavailable planned</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-down/service-unavailable-unplanned">Service unavailable unplanned</a>
         </li>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-unavailable-unplanned">Service unavailable unplanned</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/service-down/service-unavailable-planned">Service unavailable planned</a>
         </li>
+      </ul>
+      <h2 class="h3">Session expired</h2>
+      <ul>
         <li>
           <a href="/{{ PROTOTYPEURL}}/errors/system-error/session-expired">Session expired</a>
         </li>
+      </ul>
+      <h2 class="h3">Page not found</h2>
+      <ul>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/page-not-found">404 page not found</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/cannot-save-choice">Unable to save the user's choice</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/geo-restricted">User is forbidden from seeing the page</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/page-not-found">Page not found</a>
         </li>
       </ul>
-
+      <h2 class="h3">Cookies</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/cookies-disabled">Cookies disabled</a>
+        </li>
+      </ul>
+      <h2 class="h3">Geo restricted</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/geo-restricted">Geo restricted</a>
+        </li>
+      </ul>
+      <h2 class="h3">User under 13</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/user-underage">User under 13</a>
+        </li>
+      </ul>
+      <h2 class="h3">PDS errors</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/no-contact-details">No contact details found for user</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/wrong-contact-details">Wrong contact details found</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/no-unique-match">No unique match found</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/postcode-route-failed">Postcode route failed</a>
+        </li>
+      </ul>
+      <h2 class="h3">Security code errors</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/security-code/no-security-code">User not received security code</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/security-code/expired-security-code">Security code expired</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/security-code/incorrect-security-code">Incorrect security code submitted</a>
+        </li>
+      </ul>
+      <h2 class="h3">NHS App error</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/jwt-failure-app">JWT failure on NHS App</a>
+        </li>
+      </ul>
+        <h2 class="h3">Choice errors</h2>
+        <ul>
+          <li>
+            <a href="/{{ PROTOTYPEURL}}/errors/system-error/choice-errors/technical-fail">User cannot make a choice or see current choice</a>
+          </li>
+          <li>
+            <a href="/{{ PROTOTYPEURL}}/errors/system-error/choice-errors/save-choice-failed">Unable to save user's choice</a>
+          </li>
     </div>
   </div>
 </div>
