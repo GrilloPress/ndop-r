@@ -1,6 +1,6 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
-{% set contentTitle = "Error pages" %}
+{% set contentTitle = "Sorry, we could not find your contact details" %}
 
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
@@ -19,14 +19,10 @@
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
-      <ul>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/validation/index">Validation errors</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/index">System errors</a>
-        </li>
-      </ul>
+
+      <p>You'll need to update your details at your GP practice to be able to make your choice online.</p>
+
+      <p><a href="">You can make your choice by phone or by filling out a paper form instead.</a></p>
 
     </div>
   </div>

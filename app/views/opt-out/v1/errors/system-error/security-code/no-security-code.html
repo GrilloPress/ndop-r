@@ -1,7 +1,7 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
-{% set contentTitle = "Error pages" %}
-
+{% set contentTitle = "Contact us if you have not received your security code" %}
+{% set beta = "True" %}
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
 {% endblock %}
@@ -14,19 +14,20 @@
 {% block beforeContent %}
 {% endblock %}
 
+
 {% block content %}
 <div class="grid-row">
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
-      <ul>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/validation/index">Validation errors</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/index">System errors</a>
-        </li>
-      </ul>
+      <p>
+        We can help you use the service, or make your choice on your behalf.
+      </p>
+      <p>
+        <strong>NHS Digital Customer Service Centre</strong>
+        <br>Telephone: 0300 303 5678
+        <br>Monday to Friday, 9am to 5pm excluding bank holidays
+      </p>
 
     </div>
   </div>

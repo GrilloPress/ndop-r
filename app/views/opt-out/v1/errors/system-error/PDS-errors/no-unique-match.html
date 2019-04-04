@@ -1,6 +1,6 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
-{% set contentTitle = "Error pages" %}
+{% set contentTitle = "Sorry, you cannot make your choice because we found more than one person's contact details" %}
 
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
@@ -19,14 +19,16 @@
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
-      <ul>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/validation/index">Validation errors</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/index">System errors</a>
-        </li>
-      </ul>
+
+
+      <p>This may be because someone has the same name and postcode as you.</p>
+
+      <p>You may be able to make your choice online by giving us your NHS number.</p>
+
+      </div>
+          <input type="submit" class="button" id="submit-details" value="Use my NHS number">
+       </form>
+      </div>
 
     </div>
   </div>

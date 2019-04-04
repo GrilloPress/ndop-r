@@ -1,7 +1,7 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
-{% set contentTitle = "Error pages" %}
-
+{% set contentTitle = "Sorry, we have the wrong contact details for you" %}
+{% set beta = "True" %}
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
 {% endblock %}
@@ -14,20 +14,18 @@
 {% block beforeContent %}
 {% endblock %}
 
+
 {% block content %}
 <div class="grid-row">
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
-      <ul>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/validation/index">Validation errors</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/index">System errors</a>
-        </li>
-      </ul>
 
+      <p>This may be because your GP practice does not have the correct details for you, or your GP practice has not shared them with us.</p>
+
+      <p>You'll need to update your details at your GP practice to be able to make your choice online.</p>
+
+      <p>Please see <a href="/v1/00-other-ways-to-manage-your-choice">other ways to make your choice</a>.</p>
     </div>
   </div>
 </div>

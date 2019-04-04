@@ -1,0 +1,39 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Sorry, we could not find that page" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+      <p>If you typed the web address, check it is correct.</p>
+
+      <p>If you pasted the web address, check you copied the entire address.</p>
+
+      <p>If the web address is correct or you selected a link or button, contact us to let us know there is a problem with this page:</p>
+
+      <p><strong>By email</strong>
+      <br><a href="mailto:enquiries@nhsdigital.nhs.uk">enquiries@nhsdigital.nhs.uk</a></p>
+
+      <p><strong>By phone</strong>
+      <br>0300 303 5678
+      <br>Monday to Friday, 9am to 5pm excluding bank holidays</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

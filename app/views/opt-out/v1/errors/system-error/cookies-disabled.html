@@ -1,6 +1,6 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
-{% set contentTitle = "Error pages" %}
+{% set contentTitle = "You must enable cookies to make your choice online" %}
 
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
@@ -19,14 +19,10 @@
   <div class="column--two-thirds">
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
-      <ul>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/validation/index">Validation errors</a>
-        </li>
-        <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/index">System errors</a>
-        </li>
-      </ul>
+
+      <p>We put small files called cookies onto your device to keep your visit secure.<a href="https://your-data-matters.service.nhs.uk/cookiespolicy">Find out more about how to manage cookies.</a></p>
+
+      <p><a href="">You can make your choice by phone or by filling out a paper form instead.</a></p>
 
     </div>
   </div>
