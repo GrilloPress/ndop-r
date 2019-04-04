@@ -1,0 +1,35 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Sorry, we could not accept your security code" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <p>
+        Contact us for help using the service, or we can make your choice on your behalf.
+      </p>
+      <p>
+        <strong>NHS Digital Customer Service Centre</strong>
+        <br>Telephone: 0300 303 5678
+        <br>Monday to Friday, 9am to 5pm excluding bank holidays
+      </p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
