@@ -93,3 +93,7 @@
     margin-bottom: 80px;
   }
 }
+
+.nhsuk-feedback-banner__close:focus {
+  outline: 3px solid $focus-colour;
+}
