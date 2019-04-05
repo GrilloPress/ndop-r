@@ -1,0 +1,77 @@
+{% set PROTOTYPEURL = "feedback" %}
+{% set serviceName = "Choose if data from your health records can be shared for research and planning" %}
+{% set contentTitle = "Your choice has been saved" %}
+{% set beta = "True" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+<script src="/js/feedback.js" type="text/javascript"></script>
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+{% set footerClasses = "ndop-banner--active" %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+     <div class="reading-width">
+       <h1 class="h2">{{ contentTitle }}</h1>
+
+       {% if data['single-pref'] === "allow" %}
+       <div id="shared">
+         <p>
+           Your confidential patient information can be shared to help improve health and care services for the future.
+         </p>
+         <h2 class="h3" id="what-happens-next-shared">What happens next</h2>
+         <p>
+           If you have previously chosen not to share your confidential patient information, it can take up to 21 days before your opt-out is withdrawn.
+         </p>
+         <p>
+           You can update your choice at any time in the future using this service.
+         </p>
+       </div>
+       {% else %}
+       <div id="not-shared">
+         <p>
+           Your confidential patient information will not be shared for research and planning.
+         </p>
+         <h2 class="h3" id="what-happens-next-not-shared">What happens next</h2>
+         <p>
+           It can take up to 21 days before your decision can be applied to future data releases leaving the NHS. Your choice will be applied gradually across all organisations that use confidential patient information.
+         </p>
+         <p>
+           Your choice will be acknowledged by other organisations that use health and social care information by March 2020.
+         </p>
+         <p>
+           You can update your choice at any time in the future using this service.
+         </p>
+       </div>
+       {% endif %}
+
+
+     </div>
+   </div>
+</div>
+{% endblock %}
+
+{% block afterContent %}
+<div class="nhsuk-feedback-banner" id="nhsuk-feedback-banner">
+   <div class="page-section">
+     <div class="grid-row">
+       <div class="column--full">
+         <div class="nhsuk-feedback-banner__content">
+           <h2 class="nhsuk-feedback-banner__heading h4">Help us make this website better</h2>
+           <p class="nhsuk-feedback-banner__message"><a class="nhsuk-u-nowrap" target=_blank href=https://nhsdigital.eu.qualtrics.com/jfe/form/SV_eqvKn0D54sdz8c5>Tell us what worked and what we could improve</a></p>
+           <button class="nhsuk-feedback-banner__close" id="nhsuk-feedback-banner-close" type="button">Close<span class="util-visuallyhidden"> feedback invite</span></button>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+{% endblock %}
