@@ -1,0 +1,34 @@
+.audit-list-cards {
+
+  a {
+
+    text-decoration: none;
+    color: $color_nhsuk-black;
+    display: block;
+
+    &:hover {
+
+      background-color: $nhsuk-link-hover-background-color;
+
+    }
+  }
+
+}
+
+.audit-list-cards__item {
+
+  margin-bottom: nhsuk-spacing(5);
+
+}
+
+.audit-list-cards__heading {
+
+  color: $color_nhsuk-blue;
+  margin-bottom: nhsuk-spacing(2);
+}
+
+.audit-list-cards__heading--no-link {
+
+  color: $color_nhsuk-black;
+  margin-bottom: nhsuk-spacing(2);
+}

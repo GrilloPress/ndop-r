@@ -125,7 +125,7 @@ $type-settings: (
   ),
   5: (
     large: (
-      font-size: 40px,
+      font-size: 38px,
       line-height: $baseline-grid-unit * 12, // 80px
     ),
     medium: (
@@ -133,8 +133,8 @@ $type-settings: (
       line-height: $baseline-grid-unit * 12, // 64px
     ),
     small: (
-      font-size: 36px,
-      line-height: $baseline-grid-unit * 12, // 48px
+      font-size: 30px,
+      line-height: 40px, // 48px
     ),
     print: (
       font-size: 22pt,
