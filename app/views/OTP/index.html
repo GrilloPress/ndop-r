@@ -1,0 +1,50 @@
+{% set PROTOTYPEURL = "OTP" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Help users get their security code" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+      <h2 class="h3">Pages to change</h2>
+      <ol>
+        <li>
+          <a href="/opt-out/v1/details/1_we-need-to-check-who-you-are">We need to check who you are (interruption card)</a>
+        </li>
+        <li>
+          <a href="/opt-out/v1/nhs-number/6_check-your-details">Check your details (NHS number)</a>
+        </li>
+        <li>
+          <a href="/opt-out/v1/postcode/6_check-your-details">Check your details (Postcode)</a>
+        </li>
+        <li>
+          <a href="/{{PROTOTYPEURL}}/get-your-code/both">Get your security code (more than one contact method)</a>
+        </li>
+        <li>
+          <a href="/opt-out/v1/OTP/7_get-your-security-code">Get your security code (email only)</a>
+        </li>
+        <li>
+          <a href="/opt-out/v1/OTP/7_get-your-security-code">Get your security code (mobile only)</a>
+        </li>
+        <li>
+          <a href="/opt-out/v1/OTP/8_enter-your-security-code">Enter your security code</a>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+</div>
+{% endblock %}
