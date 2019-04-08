@@ -21,13 +21,13 @@
       <div class="reading-width">
 
          <h1 class="h2">{{ contentTitle }}</h1>
-         <p>With the details you gave us we think we’ve found your contact details from your health records. We could only find your <span id="contact-method-2">email address</span>.</p>
+         <p>With the details you gave us we think we’ve found your contact details from your health records. We could only find your <span id="contact-method-2">mobile number</span>.</p>
 
             <p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
 
-            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code/email" method="get">
-              <h2 class="h3">We'll send your security code by email to <span class="otp-contact_field" id="contact-value">
-                al•••••••••••@gmail.com
+            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
+              <h2 class="h3">We'll send your security code by text to <span class="otp-contact_field" id="contact-value">
+                ••••••••788
               </span></h2>
 
               <input id="choose-option" class="button" type="submit" value="Get code" />
