@@ -64,19 +64,25 @@
           <a href="/{{ PROTOTYPEURL}}/errors/system-error/user-underage">User under 13</a>
         </li>
       </ul>
-      <h2 class="h3">PDS errors</h2>
+      <h2 class="h3">Errors using postcode</h2>
       <ul>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/no-contact-details">No contact details found for user</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/errors-using-postcode/no-contact-details-postcode">No contact details found for user</a>
         </li>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/wrong-contact-details">Wrong contact details found</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/errors-using-postcode/no-match-records">Details do not match our records</a>
+        </li>
+      </ul>
+      <h2 class="h3">Errors using NHS number</h2>
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/errors-using-nhs-number/no-contact-details-nhs-number">No contact details found for user</a>
         </li>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/no-unique-match">No unique match found</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/errors-using-nhs-number/no-unique-match">No unique match</a>
         </li>
         <li>
-          <a href="/{{ PROTOTYPEURL}}/errors/system-error/PDS-errors/postcode-route-failed">Postcode route failed</a>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/errors-using-nhs-number/invalid-nhs-number">Invalid NHS number</a>
         </li>
       </ul>
       <h2 class="h3">Security code errors</h2>
@@ -89,6 +95,9 @@
         </li>
         <li>
           <a href="/{{ PROTOTYPEURL}}/errors/system-error/security-code/incorrect-security-code">User has entered an incorrect security code too many times</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/errors/system-error/security-code/wrong-contact-details">User's contact details are wrong</a>
         </li>
       </ul>
       <h2 class="h3">NHS App error</h2>
