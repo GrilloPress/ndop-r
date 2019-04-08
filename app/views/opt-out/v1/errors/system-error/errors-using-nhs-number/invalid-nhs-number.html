@@ -1,6 +1,6 @@
 {% set PROTOTYPEURL = "opt-out/v1" %}
 {% set serviceName = "Choose if data from your health records is shared for research and planning" %}
-{% set contentTitle = "Sorry, you cannot make your choice because we found more than one person's contact details" %}
+{% set contentTitle = "Sorry, your NHS number is not valid" %}
 
 {% set title = contentTitle + " - " + serviceName %}
 {% block pageScripts %}
@@ -20,15 +20,12 @@
     <div class="reading-width">
       <h1 class="h2">{{ contentTitle }}</h1>
 
+      <p>
+        Contact us for help making your choice:
+      </p>
 
-      <p>This may be because someone has the same name and postcode as you.</p>
-
-      <p>You may be able to make your choice online by giving us your NHS number.</p>
-
-      </div>
-          <input type="submit" class="button" id="submit-details" value="Use my NHS number">
-       </form>
-      </div>
+      <p>Telephone: 0300 303 5678
+      <br>Monday to Friday, 9am to 5pm excluding bank holidays</p>
 
     </div>
   </div>
