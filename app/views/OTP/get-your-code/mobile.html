@@ -25,14 +25,19 @@
 
             <p>We now need to send you a security code. After 30 minutes your security code will not work.</p>
 
-            <form id="verification-radio" class="form" action="/{{PROTOTYPE_URL}}/enter-your-code" method="get">
+            <form id="verification-radio" class="form" action="/{{PROTOTYPEURL}}/enter-your-code/enter-your-security-code" method="post">
               <h2 class="h3">We'll send your security code by text to <span class="otp-contact_field" id="contact-value">
                 ••••••••788
-              </span></h2>
+              </span>
+            </h2>
 
-              <input id="choose-option" class="button" type="submit" value="Get code" />
+            <button class="button" type="submit" name="channelChoice" value="text">
+              Get code
+            </button>
+
+
               <p>
-                <a href="/{{PROTOTYPE_URL}}/index">What to do if you think these contact details are wrong</a>
+                <a href="/{{PROTOTYPEURL}}/get-your-code/wrong-details">What to do if you think these contact details are wrong</a>
               </p>
             </form>
       </div>

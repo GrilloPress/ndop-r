@@ -104,7 +104,7 @@
     opacity: 0;
     margin-top: 0;
     z-index: 1;
-
+    cursor: pointer;
 }
 [type="radio"]:checked + label,
 [type="radio"]:not(:checked) + label
