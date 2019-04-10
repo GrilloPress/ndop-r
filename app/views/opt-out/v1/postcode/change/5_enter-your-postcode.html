@@ -25,18 +25,16 @@
       <form class="" action="/{{ PROTOTYPEURL }}/postcode/6_check-your-details" method="post">
          <div>
             <h1 class="h2">
-               <label for="nhs-number">{{ contentTitle }}</label>
+               <label for="postcode-input">{{ contentTitle }}</label>
             </h1>
             <div class="grid-row">
                       <div class="column--three-quarters">
-                        <div id="postcode-input">
                           <div class="form-row">
                             <p class="error error-message error-text error-label" id="postcode-error">Please enter your postcode</p>
                             <span class="form-label__hint">This must be your postcode you have registered with your GP surgery.</span>
                             <span class="form-label__hint">For example, 'LS1 6AE'</span>
                             <input autocomplete="off" type="text" id="postcode-input" name="postcode" value="{{ data['postcode'] if data['postcode'] else 'LS1 6AE' }}" class="-small form-control">
                           </div>
-                        </div>
                       </div>
                     </div>
 
