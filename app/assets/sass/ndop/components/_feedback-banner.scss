@@ -97,3 +97,10 @@
 .nhsuk-feedback-banner__close:focus {
   outline: 3px solid $focus-colour;
 }
+
+.nhsuk-feedback-banner--no-js {
+
+  display: block;
+  position: inherit;
+  margin-bottom: -2em;
+}
