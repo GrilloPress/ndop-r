@@ -1,0 +1,104 @@
+{% set PROTOTYPEURL = "website/v1" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Different languages and formats" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+
+{% extends 'layouts/layout-nhsuk.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/" + PROTOTYPEURL,
+        text: "Home"
+      },
+      {
+        href: "/" + PROTOTYPEURL + "/overview",
+        text: serviceName
+      }
+    ],
+    href: "/" + PROTOTYPEURL + "/start",
+    text: "Make your choice"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        {{ contentTitle }}
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          {{ serviceName}}
+        </span>
+      </h1>
+
+      <h2 id="#other-formats" class="h3">Other formats</h2>
+          <ul class="audit-list--unstyled">
+            <li>
+              <a>Audio version</a>
+            </li>
+            <li>
+              <a>British Sign Language video</a>
+            </li>
+            <li>
+              <a>Easy read leaflet</a>
+            </li>
+            <li>
+              <a>Large print leafet</a>
+            </li>
+          </ul>
+
+          <h2 id="#other-languages" class="h3">Other language leaflets</h2>
+          <ul class="audit-list--unstyled">
+            <li>
+              <a>Albanian - Shqip</a>
+            </li>
+            <li>
+              <a>Amharic - አማርኛ</a>
+            </li>
+            <li>
+              <a>Arabic - العربية</a>
+            </li>
+            <li>
+              <a>Chinese - 中文</a>
+            </li>
+            <li>
+              <a>Farsi - فارسی</a>
+            </li>
+            <li>
+              <a>Pashto - پښتو</a>
+            </li>
+            <li>
+              <a>Sorani - سۆرانی</a>
+            </li>
+            <li>
+              <a>Tamil - தமிழ்</a>
+            </li>
+            <li>
+              <a>Tigrinya - ትግርኛ</a>
+            </li>
+            <li>
+              <a>Urdu - اردو</a>
+            </li>
+            <li>
+              <a>Welsh - Cymraeg</a>
+            </li>
+          </ul>
+
+
+
+      {{ pagination({
+        "previousUrl": "/" + PROTOTYPEURL + "/start",
+        "previousPage": "Make your choice"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

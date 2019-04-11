@@ -13,3 +13,21 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below...
 ///////////////////////////////////////////
+
+.audit-list--unstyled {
+
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.nhsuk-download__link {
+
+  display: block;
+  @include nhsuk-responsive-margin(4, "bottom")
+}
+
+.nhsuk-download__thumbnail {
+
+  display: block;
+  margin: 0 auto;
+}

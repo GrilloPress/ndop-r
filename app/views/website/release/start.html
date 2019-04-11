@@ -1,0 +1,116 @@
+{% set PROTOTYPEURL = "website/release" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Make your choice" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+
+{% extends 'layouts/layout-nhsuk.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/" + PROTOTYPEURL,
+        text: "Home"
+      }
+    ],
+    href: "/" + PROTOTYPEURL + "/overview",
+    text: serviceName
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        {{ contentTitle }}
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          {{ serviceName}}
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/" + PROTOTYPEURL + "/overview",
+            text: "Overview"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/cpi",
+            text: "Where confidential patient information is used"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/not-apply",
+            text: "Where your choice does not apply"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/start",
+            text: "Make your choice",
+            current: "true"
+          }
+        ]
+      }) }}
+
+      <p>
+          Use this service to choose whether confidential patient information from your health records can be used for research and planning.
+        </p>
+        <p>
+          If you choose not to allow your confidential patient information to be used for research and planning, this will be respected and applied by NHS Digital and Public Health England. These organisations collect, process and release health and adult social care data on a national basis.
+        </p>
+        <p>
+          Your decision will also be respected and applied by all other organisations that are responsible for health and care information by March 2020.
+        </p>
+        <h2>Making your choice</h2>
+        <p>You can make or change your choice by using our online service or completing a paper form and posting it back to us. You can also ask for help using our telephone service. You must complete a paper form if you wish to make or change a choice on behalf of someone else.</p>
+
+        <h3 id="before-you-start">Before you start</h3>
+        <p>
+          You must have an email address or phone number registered with an NHS service to use the online service. Ask your GP surgery for help if you need to confirm your contact information is up-to-date.
+        </p>
+        <p>To continue you will need:</p>
+        <ul>
+          <li>
+            to be aged 13 or over
+          </li>
+          <li>access to your email or mobile phone</li>
+          <li>your NHS number or postcode registered with your GP surgery&#8203;</li>
+        </ul>
+
+        {{ details({
+          "text": "Where can I find my NHS number?",
+          "HTML": "
+          <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+          <p>You can find your NHS number on any document sent to you by the NHS. This may include:</p>
+          <ul>
+            <li>prescriptions</li>
+            <li>test results</li>
+            <li>hospital referral letters</li>
+            <li>appointment letters</li>
+          </ul>
+          <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+          "
+        }) }}
+
+        <form class="" action="" method="get">
+          <input class="nhsuk-button" type="submit" value="Start now" aria-label="Start the online '{{ serviceName }}' service">
+        </form>
+
+        <h2 id="other-ways-to-manage-your-choice">Other ways to make your choice </h2>
+        <p>
+          If you are unable to use our online service or wish to set a choice on behalf of someone else, see <a href="/{{ PROTOTYPEURL }}/other-ways">other ways to make your choice</a>.
+        </p>
+
+      {{ pagination({
+        "previousUrl": "/" + PROTOTYPEURL + "/not-apply",
+        "previousPage": "Where your choice does not apply"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}

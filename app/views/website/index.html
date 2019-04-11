@@ -1,0 +1,42 @@
+{% set PROTOTYPEURL = "website" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Website prototypes" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>{{ contentTitle }}</h1>
+      <h2>Latest</h2>
+
+      <ul class="audit-list--unstyled audit-list-cards">
+        <li class="audit-list-cards__item">
+          <a href="/{{PROTOTYPEURL}}/release/overview">
+            <h2 class="audit-list-cards__heading nhsuk-heading-m">Live release (7th March)</h2>
+            <p>Baseline</p>
+          </a>
+        </li>
+        <li class="audit-list-cards__item">
+          <a href="/{{PROTOTYPEURL}}/v1/overview">
+            <h2 class="audit-list-cards__heading nhsuk-heading-m">Next release (v1)</h2>
+            <p>
+              Start page simplification
+            </p>
+          </a>
+        </li>
+      </ul>
+
+  </div>
+</div>
+{% endblock %}
