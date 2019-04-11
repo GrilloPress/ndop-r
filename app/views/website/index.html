@@ -17,25 +17,36 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-two-thirds">
 
-      <h1>{{ contentTitle }}</h1>
-      <h2>Latest</h2>
+    {{ backLink({
+      "href": "/",
+      "text": "Go back to the previous page"
+    }) }}
 
-      <ul class="audit-list--unstyled audit-list-cards">
-        <li class="audit-list-cards__item">
-          <a href="/{{PROTOTYPEURL}}/release/overview">
-            <h2 class="audit-list-cards__heading nhsuk-heading-m">Live release (7th March)</h2>
-            <p>Baseline</p>
-          </a>
-        </li>
-        <li class="audit-list-cards__item">
-          <a href="/{{PROTOTYPEURL}}/v1/overview">
-            <h2 class="audit-list-cards__heading nhsuk-heading-m">Next release (v1)</h2>
-            <p>
-              Start page simplification
-            </p>
-          </a>
-        </li>
-      </ul>
+    <h1>{{ contentTitle }}</h1>
+
+    <h2>Latest</h2>
+
+    <ul class="audit-list--unstyled audit-list-cards">
+      <li class="audit-list-cards__item">
+        <a href="/{{PROTOTYPEURL}}/v1/overview">
+          <h3 class="audit-list-cards__heading nhsuk-heading-m">Next release (v1)</h3>
+          <p>
+            Start page simplification
+          </p>
+        </a>
+      </li>
+    </ul>
+
+    <h2>Live</h2>
+
+    <ul class="audit-list--unstyled audit-list-cards">
+      <li class="audit-list-cards__item">
+        <a href="/{{PROTOTYPEURL}}/release/overview">
+          <h3 class="audit-list-cards__heading nhsuk-heading-m">Live release (7th March)</h3>
+          <p>Baseline</p>
+        </a>
+      </li>
+    </ul>
 
   </div>
 </div>
