@@ -30,4 +30,8 @@
 
   display: block;
   margin: 0 auto;
+
+  @include mq($until: tablet) {
+    margin: 0;
+  }
 }
