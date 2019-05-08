@@ -1,0 +1,143 @@
+{% set PROTOTYPEURL = "website/v1" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Other ways to make a choice " %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+
+{% extends 'layouts/layout-nhsuk.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/" + PROTOTYPEURL,
+        text: "Home"
+      },
+      {
+        href: "/" + PROTOTYPEURL + "/overview",
+        text: serviceName
+      }
+    ],
+    href: "/" + PROTOTYPEURL + "/start",
+    text: "Make your choice"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        {{ contentTitle }}
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          {{ serviceName}}
+        </span>
+      </h1>
+
+      <p>You can make or change a choice for yourself by:</p>
+      <ul>
+        <li>
+          phone
+        </li>
+        <li>
+          post
+        </li>
+        <li>
+          the NHS App
+        </li>
+      </ul>
+      <p>You can make or change a choice by post for your children under the age of 13 or someone you can legally make decisions for.</p>
+
+      <p>
+        <a href="#">Read our privacy notice</a> to find out how your data is used to apply your choice.
+      </p>
+
+      <h2 id="yourself">Make or change a choice for yourself  </h2>
+      <h3>By phone </h3>
+      <p>Speak to the NHS Digital Contact Centre. They can help you use the online service or make or change a choice on your behalf.  </p>
+      <p><strong>NHS Digital Contact Centre </strong>
+      <br>0300 303 5678
+      <br>Monday to Friday, 9am to 5pm excluding bank holidays</p>
+
+      <h3>By post</h3>
+      <p>Fill in the form and send it back to us by post.  </p>
+      <section class="nhsuk-download">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-quarter nhsuk-u-one-quarter-tablet">
+            <a href="/forms/Non-Digital Opt-Out Form v15" class="nhsuk-download__link">
+              <img alt="download Make a choice by post form" class="nhsuk-download__thumbnail" src="/images/Manage your choice_THUMBNAIL.png" height="150" width="auto">
+            </a>
+          </div>
+          <div class="nhsuk-grid-column-three-quarters">
+            <ul class="audit-list--unstyled">
+              <li><a href="/forms/Non-Digital Opt-Out Form v15">Make a choice by post</a></li>
+              <li>Published: 25/05/2018</li>
+              <li>Last updated: 25/05/2018</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <h3>By the NHS App</h3>
+      <p>You can make or change your choice in the NHS App. You’ll need to have an NHS login.</p>
+      <p>Find out <a href="https://www.nhs.uk/using-the-nhs/nhs-services/the-nhs-app/">more about the NHS App</a>.</p>
+
+    <h2 id="anotherPerson">Make or change a choice for your children under the age of 13  </h2>
+
+    <h3>By post</h3>
+    <p>Fill in the form and send it back to us by post.  </p>
+    <p>You must be the parent or legal guardian to make a choice for your children. </p>
+    <section class="nhsuk-download">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-one-quarter nhsuk-u-one-quarter-tablet">
+          <a href="/forms/Non-Digital Opt-Out Form v15" class="nhsuk-download__link">
+            <img alt="download Make your child’s choice on their behalf form" class="nhsuk-download__thumbnail" src="/images/Manage your childs choice on their behalf_thumbnail.jpg" height="150" width="auto">
+          </a>
+        </div>
+        <div class="nhsuk-grid-column-three-quarters">
+          <ul class="audit-list--unstyled">
+            <li><a href="/forms/Non-Digital Parental Request Opt-Out Form v20.pdf">Make your child’s choice on their behalf</a></li>
+            <li>Published: 25/05/2018</li>
+            <li>Last updated: 25/05/2018</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <h2>Make or change a choice for someone you can legally make decisions for  </h2>
+
+    <h3>By post</h3>
+    <p>Fill in the form and send it back to us by post.   </p>
+    <p>You must have legal authority to make a choice for someone else. For example, if you have power of attorney.  </p>
+
+      <section class="nhsuk-download">
+        <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-one-quarter nhsuk-u-one-quarter-tablet">
+            <a href="/forms/Non-Digital Opt-Out Form v15" class="nhsuk-download__link">
+              <img alt="download Make your child’s choice on their behalf form" class="nhsuk-download__thumbnail" src="/images/Manage another persons choice on their behalf_THUMBNAIL.png" height="150" width="auto">
+            </a>
+          </div>
+          <div class="nhsuk-grid-column-three-quarters">
+            <ul class="audit-list--unstyled">
+              <li><a href="/forms/Non-Digital Parental Request Opt-Out Form v20.pdf">Manage another person's choice on their behalf</a></li>
+              <li>Published: 25/05/2018</li>
+              <li>Last updated: 25/05/2018</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {{ pagination({
+        "previousUrl": "/" + PROTOTYPEURL + "/start",
+        "previousPage": "Make your choice"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
