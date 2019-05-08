@@ -1,0 +1,34 @@
+{% set PROTOTYPEURL = "website/nhs-app" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Help users use the NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    {{ backLink({
+      "href": "/website/index",
+      "text": "Go back to the previous page"
+    }) }}
+
+    <h1>{{ contentTitle }}</h1>
+
+    <ul>
+      <li><a href="/{{ PROTOTYPEURL }}/start">Start page</a></li>
+      <li><a href="/{{ PROTOTYPEURL }}/other-ways">Other ways to make your choice page</a></li>
+    </ul>
+
+  </div>
+</div>
+{% endblock %}
