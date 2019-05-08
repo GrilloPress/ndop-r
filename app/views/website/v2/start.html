@@ -1,0 +1,126 @@
+{% set PROTOTYPEURL = "website" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Make your choice" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+
+{% extends 'layouts/layout-nhsuk.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/" + PROTOTYPEURL,
+        text: "Home"
+      }
+    ],
+    href: "/" + PROTOTYPEURL + "/overview",
+    text: serviceName
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        {{ contentTitle }}
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom ">
+          {{ serviceName}}
+        </span>
+      </h1>
+
+      {{ contentsList({
+        items: [
+          {
+            href: "/" + PROTOTYPEURL + "/overview",
+            text: "Overview"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/cpi",
+            text: "Where confidential patient information is used"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/not-apply",
+            text: "Where your choice does not apply"
+          },
+          {
+            href: "/" + PROTOTYPEURL + "/start",
+            text: "Make your choice",
+            current: "true"
+          }
+        ]
+      }) }}
+
+      <p>Use this service to: </p>
+      <ul>
+        <li>choose if your confidential patient information is shared for research and planning </li>
+        <li>change or check your current choice </li>
+      </ul>
+      <p>Your choice will be applied by:</p>
+      <ul>
+        <li>NHS Digital and Public Health England </li>
+        <li>all other health and care organisations by March 2020 </li>
+      </ul>
+      <p>Any choice you make will not change your individual care.</p>
+
+        <h2 id="before-you-start">Before you start</h2>
+        <p>You must:</p>
+        <ul>
+          <li>be aged 13 or older</li>
+          <li>have access to your email or mobile phone</li>
+          <li>have your NHS number</li>
+          <div class="nhsuk-u-margin-bottom-2">
+            or
+          </div>
+          <li>your postcode registered with your GP surgery </li>
+        </ul>
+
+        {{ details({
+          "text": "Where can I find my NHS number?",
+          "HTML": "
+          <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+          <p>You can find your NHS number by logging in to a GP practice online service or on any document sent to you by the NHS, such as your:</p>
+          <ul>
+            <li>prescriptions</li>
+            <li>test results</li>
+            <li>hospital referral letters</li>
+            <li>appointment letters</li>
+          </ul>
+          <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+          "
+        }) }}
+
+        <form class="" action="" method="get">
+          <input class="nhsuk-button" type="submit" value="Start now" aria-label="Start the online '{{ serviceName }}' service">
+        </form>
+
+        <h2 id="other-ways-to-manage-your-choice">Other ways to make a choice </h2>
+
+        <p>
+          You can also make or change a choice for yourself by:
+        </p>
+        <ul>
+          <li>phone</li>
+          <li>post</li>
+          <li>the NHS App</li>
+        </ul>
+
+        <p>If you want to make or change a choice for someone else, you can do this by post.</p>
+        <p>
+          Find out <a href="/{{ PROTOTYPEURL }}/v2/other-ways">how to make a choice by post, phone or the NHS App</a>.
+        </p>
+
+      {{ pagination({
+        "previousUrl": "/" + PROTOTYPEURL + "/not-apply",
+        "previousPage": "Where your choice does not apply"
+      }) }}
+
+    </div>
+  </div>
+{% endblock %}
