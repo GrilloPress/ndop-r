@@ -1,0 +1,33 @@
+{% set PROTOTYPEURL = "invalid-nhs-number" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Sorry, we cannot accept your NHS number" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+      <p>
+        Contact us for help making your choice:
+      </p>
+
+      <p>Telephone: 0300 303 5678
+      <br>Monday to Friday, 9am to 5pm excluding bank holidays</p>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
