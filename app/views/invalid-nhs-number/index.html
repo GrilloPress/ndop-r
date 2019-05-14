@@ -1,0 +1,34 @@
+{% set PROTOTYPEURL = "invalid-nhs-number" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Improving invalid NHS number system error messages" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+      <ul>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/cannot-accept-nhs-number-1">User enters an invalid NHS number once</a>
+        </li>
+        <li>
+          <a href="/{{ PROTOTYPEURL}}/cannot-accept-nhs-number-2">User enters an invalid NHS number more than once</a>
+        </li>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
