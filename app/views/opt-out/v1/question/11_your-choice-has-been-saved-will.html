@@ -1,0 +1,39 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Your choice has been saved" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+   <div class="column--two-thirds">
+     <div class="reading-width">
+       <h1 class="h2">{{ contentTitle }}</h1>
+
+       <div id="shared">
+         <p>
+           Your confidential patient information can be shared for research and planning.
+         </p>
+         <p>
+           You can update your choice at any time using this service.
+         </p>
+         <h2 class="h3" id="what-happens-next-shared">More information</h2>
+         <p>
+           <a href="https://your-data-matters.service.nhs.uk/privacynotice">Visit our privacy notice</a> for more information on how and when your choice will be applied.
+         </p>
+       </div>
+
+     </div>
+   </div>
+</div>
+{% endblock %}
