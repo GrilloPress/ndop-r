@@ -1,0 +1,32 @@
+{% set PROTOTYPEURL = "improve-nhs-app/not-app-choice" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Help users understand they're making a choice about the health and care system, not the NHS App" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+    <ul>
+      <li>
+        <a href="/{{ PROTOTYPEURL}}/not-app-choice/make-a-choice">New content on make a choice page</a>
+      </li>
+    </ul>
+
+    </div>
+  </div>
+</div>
+{% endblock %}

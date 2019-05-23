@@ -1,0 +1,35 @@
+{% set title = 'Your choice - Manage your data choice' %}
+{% set content_title = "Your choice" %}
+{% set PROTOTYPE_URL = 'improve-nhs-app/not-app-choice' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/your-choice.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block body %}
+<main id="content" role="main" class="nhsapp">
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--two-thirds">
+          <div class="reading-width">
+            <p class="alert alert-success" role="alert" style="display:none;" tabindex="-1">Your choice has been saved.</p>
+            <h1 class="h2">Your choice</h1>
+            <p>
+              You <strong id="preference">allow</strong> the use of your confidential patient information for research and planning.
+            </p>
+
+            <a href="/{{PROTOTYPE_URL}}/service/make-a-choice" class="button">Change <span class="util-visuallyhidden">your current data choice</span></a>
+
+
+            <p>
+              <a href="javascript: history.go(-2)">Go back </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}

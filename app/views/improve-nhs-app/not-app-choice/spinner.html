@@ -1,0 +1,27 @@
+{% set title = 'Make your choice - Find out why your NHS data matters' %}
+{% set content_title = 'Make your choice' %}
+{% set PROTOTYPE_URL = 'improve-nhs-app/not-app-choice' %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/spinner.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block body %}
+
+<main id="content" role="main" class="nhsapp">
+
+  <div class="page-section">
+      <div class="grid-row">
+        <div class="column--full">
+            <div class="container--loader">
+              <div id="waitingForData" class="loader mobile">
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+  </div>
+
+</main>
+{% endblock %}
