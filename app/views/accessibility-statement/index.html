@@ -1,0 +1,36 @@
+{% set PROTOTYPEURL = "accessibility-statement" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "Accessibility statement and design" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+  <div class="column--two-thirds">
+    <div class="reading-width">
+      <h1 class="h2">{{ contentTitle }}</h1>
+
+    <ul>
+      <li>
+        <a href="/{{ PROTOTYPEURL}}/statement-static-page">Accessibility statement static page</a>
+      </li>
+      <li>
+        <a href="/{{ PROTOTYPEURL}}/footer">Accessibility statement link in the footer</a>
+      </li>
+
+    </ul>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
