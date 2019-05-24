@@ -1,0 +1,56 @@
+{% set PROTOTYPEURL = "opt-out/v1" %}
+{% set serviceName = "Choose if data from your health records is shared for research and planning" %}
+{% set contentTitle = "We need to check who you are before you can make your choice" %}
+
+{% set title = contentTitle + " - " + serviceName %}
+{% block pageScripts %}
+{% endblock %}
+{% extends 'layouts/layout-ndop.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+<div class="grid-row">
+            <div class="column--full">
+              <div class="callout callout--interruption alt">
+                <div class="grid-row">
+                  <div class="column--three-quarters tablet">
+                    <h1 class="h2">{{ contentTitle }}</h1>
+                    <div class="reading-width">
+
+                      <p>
+                        We'll need your:
+                      </p>
+                      <ul>
+                        <li>name</li>
+                        <li>date of birth</li>
+                        <li>postcode or NHS number</li>
+                      </ul>
+
+                      <p>
+                        We'll use these details to find your contact details from your health records so we can send you a security code.
+                      </p>
+
+                      <form class="" action="/{{ PROTOTYPEURL }}/details/2_enter-your-name" method="post">
+                        <input class="button" type="submit" value="Continue">
+                      </form>
+
+                      <p>
+                        <a href="/improved-otp/00-privacy-notice#what-information-do-we-collect-about-you" target="_blank">How your data will be processed using this service<span class="util-visuallyhidden"> - Page opens in new window</span></a> <span aria-hidden="true"> (opens in new window).</span>
+                      </p>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+{% endblock %}
