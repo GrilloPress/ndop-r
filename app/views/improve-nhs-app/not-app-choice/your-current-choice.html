@@ -1,35 +1,26 @@
-{% set title = 'Your choice - Manage your data choice' %}
-{% set content_title = "Your choice" %}
-{% set PROTOTYPE_URL = 'improve-nhs-app/not-app-choice' %}
+{% set title = 'Make a choice - Manage your data choice' %}
+{% set contentTitle = "I allow my confidential patient information to be used for research and planning" %}
+{% set PROTOTYPE_URL = 'improve-nhs-app' %}
 {% block scripts %}
-<script src="/javascripts/{{PROTOTYPE_URL}}/your-choice.js"></script>
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
 {% endblock %}
 {% extends 'layouts/nhsapp-service.html' %}
 
-{% block body %}
-<main id="content" role="main" class="nhsapp">
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
 
-  <div class="page-section">
-      <div class="grid-row">
-        <div class="column--two-thirds">
-          <div class="reading-width">
-            <p class="alert alert-success" role="alert" style="display:none;" tabindex="-1">Your choice has been saved.</p>
-            <h1 class="h2">Your choice</h1>
-            <p>
-              You <strong id="preference">allow</strong> the use of your confidential patient information for research and planning.
-            </p>
+    <h1>Your choice</h1>
 
-            <a href="/{{PROTOTYPE_URL}}/service/make-a-choice" class="button">Change <span class="util-visuallyhidden">your current data choice</span></a>
+    <p>You <strong>do not allow</strong> the use of your confidential patient information for research and planning.</p>
 
+    <form action="/{{PROTOTYPE_URL}}/not-app-choice/make-a-choice" method="get">
+      <input type="submit" class="nhsuk-button" value="Change">
+      </input>
+    </form>
 
-            <p>
-              <a href="javascript: history.go(-2)">Go back </a>
-            </p>
+    <p><a href="">Go back</a></p>
 
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
-
-</main>
 {% endblock %}
