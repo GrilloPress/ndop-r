@@ -1,11 +1,16 @@
-{% set title = 'Make a choice - Manage your data choice' %}
 {% set contentTitle = "Make your choice" %}
 {% set PROTOTYPE_URL = 'improve-nhs-app' %}
+{% set serviceName = "The NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
 {% set question = "I allow my confidential patient information to be used for research and planning" %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
 {% endblock %}
 {% extends 'layouts/nhsapp-service.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
 
 {% block content %}
   <div class="nhsuk-grid-row">
@@ -13,9 +18,18 @@
 
     <h1>{{contentTitle}}</h1>
 
-    <p>You’re choosing if data from your health records is used across the health and care system in England.</p>
-
-    <p>You’re not choosing if the NHS App uses your data.</p>
+    <p>
+       Confidential patient information from your health records can be used for improving health, care and services, including:
+    </p>
+    <ul>
+       <li>planning to improve health and care services</li>
+       <li>
+          research to find a cure for serious illnesses
+       </li>
+    </ul>
+    <p>
+       Your decision will not affect your individual care and you can change your mind anytime you like.
+    </p>
 
 
       <form action="#" method="get">
@@ -46,7 +60,7 @@
 
       </form>
 
-      <p><a href="/{{PROTOTYPE_URL}}/not-app-choice/your-current-choice">Go back</a></p>
+      <p><a href="/{{PROTOTYPE_URL}}/not-app-choice/option-2/your-current-choice">Go back</a></p>
     </div>
   </div>
 {% endblock %}

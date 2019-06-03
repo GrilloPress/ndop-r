@@ -1,10 +1,15 @@
-{% set title = 'Make your choice - Find out why your NHS data matters' %}
 {% set content_title = 'Make your choice' %}
 {% set PROTOTYPE_URL = 'improve-nhs-app/not-app-choice' %}
+{% set serviceName = "The NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
 {% block scripts %}
 <script src="/javascripts/{{PROTOTYPE_URL}}/spinner.js"></script>
 {% endblock %}
 {% extends 'layouts/nhsapp-service.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
 
 {% block body %}
 
