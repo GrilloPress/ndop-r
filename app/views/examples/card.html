@@ -1,0 +1,44 @@
+{% set title = "This is a card" %}
+{% set serviceName = "Service name" %}
+{% set PROTOTYPEURL = "examples" %}
+{% block scripts %}
+{% endblock %}
+{% extends 'layouts/layout.html' %}
+
+{% block content %}
+<div class="nhsuk-u-reading-width">
+
+  {{ backLink({
+    "href": "index",
+    "text": "Back to list"
+  }) }}
+
+  <div class="audit-promo">
+    <div class="audit-promo-wrapper">
+      <div class="audit-promo__content">
+        <h1 class="audit-promo__heading nhsuk-heading-l">{{title}}</h1>
+        <p>
+        The text jumps out a bit more:
+        </p>
+        <ul>
+          <li>it does</li>
+          <li>just the way it is</li>
+        </ul>
+        <form action="#" method="get">
+
+          <input type="submit" class="nhsuk-button" value="Continue">
+          </input>
+
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
