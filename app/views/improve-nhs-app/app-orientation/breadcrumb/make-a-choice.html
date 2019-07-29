@@ -1,0 +1,72 @@
+{% set contentTitle = "Make your choice" %}
+{% set PROTOTYPE_URL = 'improve-nhs-app' %}
+{% set serviceName = "The NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% set question = "I allow my confidential patient information to be used for research and planning" %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="nhsuk-breadcrumb">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-u-margin-bottom-0	nhsuk-heading-s">Choose if data from your health records is shared for research and planning</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+    <h1>{{contentTitle}}</h1>
+
+    <p>
+      Your confidential patient information might be used to:
+    </p>
+    <ul>
+       <li>plan and improve health and care services</li>
+       <li>research and develop cures for serious illnesses</li>
+    </ul>
+
+
+
+      <form action="#" method="get">
+        {{ radios({
+          "idPrefix": "gov",
+          "name": "gov",
+          "fieldset": {
+            "legend": {
+              "text": question,
+              "isPageHeading": false,
+              "classes": "nhsuk-fieldset__legend--m"
+            }
+          },
+          "items": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        }) }}
+
+        <input type="submit" class="nhsuk-button" value="Submit">
+        </input>
+
+      </form>
+
+      <p><a href="/{{PROTOTYPE_URL}}/app-orientation/breadcrumb/your-current-choice">Go back</a></p>
+    </div>
+  </div>
+{% endblock %}

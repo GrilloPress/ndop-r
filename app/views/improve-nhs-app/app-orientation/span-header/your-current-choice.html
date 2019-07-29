@@ -1,0 +1,32 @@
+{% set contentTitle = "Your choice" %}
+{% set PROTOTYPE_URL = 'improve-nhs-app' %}
+{% set serviceName = "The NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class=""><span class="nhsuk-caption-l nhsuk-caption--top">Choose if data from your health records is shared for research and planning</span>{{ contentTitle }}</h1>
+
+
+    <p>You <strong>do not allow</strong> the use of your confidential patient information for research and planning.</p>
+
+    <form action="/{{PROTOTYPE_URL}}/app-orientation/span-header/make-a-choice" method="get">
+      <input type="submit" class="nhsuk-button" value="Change">
+      </input>
+    </form>
+
+    <p><a href="/{{PROTOTYPE_URL}}/app-orientation/span-header/where-choice-applies">Go back</a></p>
+
+    </div>
+  </div>
+{% endblock %}

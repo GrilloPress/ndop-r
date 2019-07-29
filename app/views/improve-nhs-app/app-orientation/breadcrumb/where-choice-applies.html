@@ -1,0 +1,52 @@
+{% set contentTitle = "Where your choice applies" %}
+{% set PROTOTYPE_URL = 'improve-nhs-app' %}
+{% set serviceName = "The NHS App" %}
+{% set title = contentTitle + " - " + serviceName %}
+{% block scripts %}
+<script src="/javascripts/{{PROTOTYPE_URL}}/set-your-preference.js"></script>
+{% endblock %}
+{% extends 'layouts/nhsapp-service.html' %}
+
+{% block pageTitle %}
+  {{ title }}
+{% endblock %}
+
+{% block beforeContent %}
+
+<div class="nhsuk-breadcrumb">
+  <div class="nhsuk-width-container">
+    <p class="nhsuk-u-margin-bottom-0	nhsuk-heading-s">Choose if data from your health records is shared for research and planning</p>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-u-reading-width">
+
+  <div class="audit-promo">
+    <div class="audit-promo-wrapper">
+      <div class="audit-promo__content">
+        <h1 class="audit-promo__heading nhsuk-heading-l">{{contentTitle}}</h1>
+
+        <p>You’re choosing if data from your health records is used across the health and care system in England.</p>
+
+        <p>You’re not choosing if the NHS App uses your data.</p>
+
+        <form action="/{{PROTOTYPE_URL}}/app-orientation/breadcrumb/your-current-choice" method="get">
+          <input type="submit" class="nhsuk-button" value="Continue">
+          </input>
+        </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+{% endblock %}
+
+{% block sidebar %}
+{% endblock %}
